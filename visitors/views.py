@@ -1,7 +1,6 @@
-from django.shortcuts import render 
-
-# Create your views here.
+from django.shortcuts import render
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
 
 
 def index(request):
@@ -15,4 +14,8 @@ def info_page(request):
 	}
 	
 	return render(request, 'info.html', context)
-	
+
+
+# @login_required
+# def make_reservation(request):
+# 	pass	

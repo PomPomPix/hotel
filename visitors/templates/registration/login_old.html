@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Guest login{% endblock %}
+{% block content %}
+	<div class="container">
+		<div class="row">
+			<div class="col-2"></div>
+			<div class="col-8">
+			
+				<form method="POST">
+					{% csrf_token %}
+					{{ form }}
+					<button type="submit" class="btn btn-outline-dark">Login</button>
+				</form>
+				<!-- <p>Don't have an account? <a href="{% url 'signup' %}">Click Here</a> to make one.</p> -->
+			</div>
+			<div class="col-2"></div>
+		</div>
+		
+	</div>
+{% endblock %}
