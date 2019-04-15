@@ -1,5 +1,7 @@
 from django.contrib import admin
-from visitors.models import Room, Reservation
+from .models import User, Rooms, Reservation, Suplier
 
-admin.site.register(Room)
+admin.site.register(Rooms)
 admin.site.register(Reservation)
+admin.site.register(User)
+admin.site.register(Suplier)
