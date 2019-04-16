@@ -7,7 +7,7 @@ class Room(models.Model):
 	ROOM_TYPE = (
 		('1p', 'Single Room'),
 		('1p_View', 'Single Room with View'),
-		('2p', 'Single Room with View'),
+		('2p', 'Double Room'),
 		('2p_View', 'Double Room with View'),
 		('Suite' , 'Suite 3Pers'),
 		('Suite_ VIP', 'VIP Suite 5Pers'),
