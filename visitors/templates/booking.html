@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block title %}Our Hotel {% endblock %}
+{% block content %}	
+
+<!-- <div class="container-fluid text-center">
+</div> -->
+<div class="container">
+	<div class="row mt-3" style="border:double;">
+		
+		<div class="col md-4" style="text-align-last: center;">
+			<h3> BOOK Your ROOM @ Our Resort </h3>
+		</div>
+	</div>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ reservation_form.non_field_errors }}
+        <fieldset class="fieldset">
+            <legend class="legend">Personal Information</legend>
+            <div class="form-row align-items-center">
+                <div class="form-group col-auto">
+                    {{ reservation_form.first_name.errors }}
+                    <label for="{{ reservation_form.first_name.id_for_label }}">First
+                        Name</label>{{ reservation_form.first_name }}
+                </div>
+                <div class="form-group col-auto">
+                    {{ reservation_form.middle_name.errors }}
+                    <label for="{{ reservation_form.middle_name.id_for_label }}">Middle
+                        Name</label>{{ reservation_form.middle_name }}
+                </div>
+                <div class="form-group col-auto">
+                    {{ reservation_form.last_name.errors }}
+                    <label for="{{ reservation_form.last_name.id_for_label }}">Last
+                        Name</label>{{ reservation_form.last_name }}
+                </div>
+            </div>
+        </fieldset>
+       
+
+       {% endblock %}
+
+	<!-- <form method="post">
+		{% csrf_token %}
+		<table class="mb-2">
+			<tbody>
+				{{ form }}
+			</tbody>
+		</table>
+		<div class="text-center">
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</div>
+	</form>
+	 -->
+<!-- </div>
+ -->
+
+
