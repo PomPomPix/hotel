@@ -8,11 +8,13 @@ from .models import Reservation
 
 
 
+from django.contrib.auth.decorators import login_required
+from .models import Reservation
+
+
 
 def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")
-
-<<<<<<< HEAD
 
 def info_page(request):
 	info_hotel = "this is a 5 Stars Hotel, where you get to come in and relax. Click herre for more details" 
