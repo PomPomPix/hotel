@@ -1,4 +1,42 @@
-{% extends 'base.html' %}
-{% block title %}{% endblock %}
-{% block content %}
+
+	body {
+		background-color:orange;
+		margin:10px;
+	}
+
+	p {
+		font-family: TimeNewRoman
+	}
+
+	h1 {
+		font-style: bold;
+		font-size: 22px;
+		color: black
+	}
+
+	h2 {
+		color: white 
+	}
+
+	h3 {
+		color: black;
+		font-size: 16px;
+	}
+
+
+	h5 	{
+		color: turquoise;
+		font-weight: bold;
+		font-size: 50px:;
+	}
+
+
+	backgroud {
+
+	width: 1000px
+	background-color: transparent;
+	border-color: turquoise:
+	border-width: 4px;
+	border: solid;
+	}
 
