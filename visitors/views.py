@@ -1,19 +1,18 @@
 from django.shortcuts import render
+from visitors import forms
+from visitors import models
 from django.http import HttpResponse
-<<<<<<< Updated upstream
 from django.contrib.auth.decorators import login_required
-=======
-<<<<<<< Updated upstream
-=======
-from django.contrib.auth.decorators import login_required
+
 from .models import Reservation
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+
+
 
 
 def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")
 
+<<<<<<< HEAD
 
 def info_page(request):
 	info_hotel = "this is a 5 Stars Hotel, where you get to come in and relax. Click herre for more details" 
@@ -22,16 +21,13 @@ def info_page(request):
 	}
 	
 	return render(request, 'info.html', context)
-<<<<<<< Updated upstream
+
 
 
 # @login_required
 # def make_reservation(request):
 # 	pass	
-=======
-<<<<<<< Updated upstream
-	
-=======
+
 
 
 def booking(request):
@@ -45,5 +41,22 @@ def booking(request):
 # @login_required
 # def make_reservation(request):
 # 	pass	
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+
+ 
+def Request_page(request):
+
+    form = forms
+    data = models.Contact.objects.all()
+
+    if(request.method=='POST'):
+
+        Name = request.POST['Name']
+        Phone = request.POST['Phone']
+        Email = request.POST['Email']
+        Special_request = request.POST['Special_request']
+       
+        add = models.Contact(Name=Name, Phone=Phone, Email=Email, Special_request=Special_request)      
+        add.save()
+ 
+    return render(request,'request.html',locals())
+

@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
+<<<<<<< HEAD
 
 class Room(models.Model):
 	ROOM_TYPE = (
@@ -41,3 +42,14 @@ class Reservation(models.Model):
 	def __str__(self):
 		return '{} {}'.format(
 			self.room.room_num, self.user)
+=======
+# Create your models here.
+
+
+class Request(models.Model):
+      Name = models.CharField(max_length = 20)
+      Phone = models.IntegerField()
+      Email = models.EmailField(max_length = 30)  
+      Special_request = models.CharField(max_length = 280)
+      
+>>>>>>> e552b7cbcfb956c419fa63c2189be28189177408

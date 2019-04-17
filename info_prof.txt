@@ -1,0 +1,15 @@
+can I book a stay? 
+given: 
+X people 
+C start date 
+D end date
+
+
+let A =today 
+if c is before A - retrurn No 
+1- we need to check all the rooms that are not free for the dates between C and D
+For thsi we get all booking which :
+
+start date is before C,
+ and the end date is before C
+start date is after C and before D 
